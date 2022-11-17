@@ -7,15 +7,73 @@
 		<style>
 			/* CSS sytling for this document */
 
+      /* Apply to all elements in the html doc */
+      * {
+        box-sizing: border-box;
+      }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Make the row container auto-resize */
+      .row::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    
+     /* For mobile phone screens (max-width: 479)*/
+     [class*="col-"] {
+        width: 100%;
+        float: left;
+     }
+     
+     /* For Tablets (and mobile phone screens in landscape) */
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        /* Divides the viewport into 8.333333% -> 100% / 12 */
+      .col-mss-1 {width: 8.33333333%;}  /* mss - medium size screen */
+      .col-mss-2 {width: 16.66666667%;}
+      .col-mss-3 {width: 25%;}
+      .col-mss-4 {width: 33.33333333%;}
+      .col-mss-5 {width: 41.66666667%;}
+      .col-mss-6 {width: 50%;}
+      .col-mss-7 {width: 58.33333333%;}
+      .col-mss-8 {width: 66.66666667%;}
+      .col-mss-9 {width: 75%;}
+      .col-mss-10 {width: 83.33333333%;}
+      .col-mss-11 {width: 91.66666667%;}
+      .col-mss-12 {width: 100%;}
+    }
+
+    /* For desktop and laptops screens */
+    @media only screen and (max-width: 768px) {
+      .col-lss-1 {width: 8.33333333%;}  /* lss - large size screen */
+      .col-lss-2 {width: 16.66666667%;}
+      .col-lss-3 {width: 25%;}
+      .col-lss-4 {width: 33.33333333%;}
+      .col-lss-5 {width: 41.66666667%;}
+      .col-lss-6 {width: 50%;}
+      .col-lss-7 {width: 58.33333333%;}
+      .col-lss-8 {width: 66.66666667%;}
+      .col-lss-9 {width: 75%;}
+      .col-lss-10 {width: 83.33333333%;}
+      .col-lss-11 {width: 91.66666667%;}
+      .col-lss-12 {width: 100%;}
+    }
+
 		</style>
 
   </head>
 
 	<body>
-		<head> Header </head>
+		<headea> Header </head>
+
 		<main>
-			<article> Article </article>
+			<div class="row"> Main container </div>
 		</main>
+
 		<footer> Footer </footer>
 	</body>
 </html>
