@@ -18,7 +18,7 @@
 		<style>
 			/* CSS sytling for this document */
 
-      /* Apply to all elements in the html doc */
+      /* Apply to all elements in the html file */
       * {
         box-sizing: border-box;
       }
@@ -27,6 +27,13 @@
         margin: 0;
         padding: 0;
       }
+
+      /* Place footer at the bottom of the webpage*/
+      body {
+      min-height: 100vh; /* set the entire page to fill the full height */
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+     }
 
       /* Make the row container auto-resize */
       .row::after {
@@ -59,7 +66,7 @@
     }
 
     /* For desktop and laptops screens */
-    @media only screen and (max-width: 768px) {
+    @media only screen and (min-width: 768px) {
       .col-lss-1 {width: 8.33333333%;}  /* lss - large size screen */
       .col-lss-2 {width: 16.66666667%;}
       .col-lss-3 {width: 25%;}
@@ -74,23 +81,39 @@
       .col-lss-12 {width: 100%;}
     }
 
+    /* Text color and content spaceing */
+    header, footer {
+      color: white;
+      padding: 10px;
+    }
+
+    /* Footer and header background colours */
+    header {
+      background: #173459;
+    }
+
+    footer {
+      background: #333333;
+    }
+
 		</style>
 
   </head>
 
 	<body>
-		<head> Header </head>
+		<header> 
+      <h2> Xordil </h2>  
+    </header>
+
 		<main>
-			<article> Article </article>
+			<div class="row"></div>
 		</main>
 
 		<!-- Footer content  -->
 		<footer>
-			<div class="footer-body"> xordil </div>
-			<div class="footer-copyright">
-			  &copy Copyright xordil 2022, all rights reserved
-			</div>
-		  </footer>
+      <p style="text-align: center;"> &copy Copyright samordil 2022, all rights reserved </p>
+		</footer>
 		  
 	</body>
+
 </html>
